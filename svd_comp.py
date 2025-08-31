@@ -5,14 +5,16 @@ class ImageSVD:
     def __init__(self, image, color):
         self.image
         self.color
-    
     def get_image_data(self, image):
         pass
 
     def svd_by_hand():
         pass
     
-    def
+    def svd_by_library():
+        pass
+    
+
 
 
 # make args eventually
