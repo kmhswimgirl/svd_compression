@@ -1,4 +1,4 @@
-import cv2
+import cv2 # pyright: ignore[reportMissingImports]
 import matplotlib.pyplot as plt
 import numpy as np
 
