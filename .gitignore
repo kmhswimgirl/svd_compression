@@ -1,1 +1,2 @@
-/.vscode
+# ignore VSCode settings
+/.vscode/*
