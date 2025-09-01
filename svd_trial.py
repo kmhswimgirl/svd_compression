@@ -59,4 +59,4 @@ def svd_gs(image, sv):
     plt.axis('off')
     plt.show()
 
-svd_color(img_data)
+svd_color(img_data, 5)
