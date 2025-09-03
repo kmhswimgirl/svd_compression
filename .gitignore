@@ -1,4 +1,4 @@
 # ignore VSCode settings
-/.vscode/*
+.vscode/*
 svd_comp/
 
