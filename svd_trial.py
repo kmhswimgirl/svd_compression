@@ -1,4 +1,4 @@
-import cv2
+import cv2 # pyright: ignore[reportMissingImports]
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -6,7 +6,7 @@ img = 'aviatabors.jpg'
 img_data = cv2.imread(img)
 
 # Return the current image
-def show_image(image, title:str):
+def show_image(image, title:str, cmap):
     plt.imshow(image, cmap='gray')
     plt.title(title)
     plt.axis('off')
@@ -20,7 +20,6 @@ def svd_color(image, sv):
     U_g, S_g, Vt_g = np.linalg.svd(G, full_matrices=False)
     U_r, S_r, Vt_r = np.linalg.svd(R, full_matrices=False)
 
-    sv = 5  # number of singular values
     R_comp = np.matrix(U_r[:, :sv]) * np.diag(S_r[:sv]) * np.matrix(Vt_r[:sv, :])
     G_comp = np.matrix(U_g[:, :sv]) * np.diag(S_g[:sv]) * np.matrix(Vt_g[:sv, :])
     B_comp = np.matrix(U_b[:, :sv]) * np.diag(S_b[:sv]) * np.matrix(Vt_b[:sv, :])
@@ -59,4 +58,4 @@ def svd_gs(image, sv):
     plt.axis('off')
     plt.show()
 
-svd_color(img_data)
+svd_color(img_data, 5)
